@@ -14,12 +14,12 @@ class SliderSeeder extends Seeder
          DB::table('slider')->insert(
         	[
         		[
-        			'img'=>'gallery/slides/1_car.svg',
+        			'img'=>'gallery/slides/1_car.png',
         			'date'=>'2017-01-06',
         			'title'=>'Vintage Auto Exhibition'
         		],
         		[
-        			'img'=>'gallery/slides/2_car.svg',
+        			'img'=>'gallery/slides/2_car.png',
         			'date'=>'2017-01-07',
         			'title'=>'Seconde title'
         		]
