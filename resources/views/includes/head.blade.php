@@ -6,7 +6,7 @@
     <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ url(elixir('css/bootstrap.min.css'))}}" rel="stylesheet">
+    <link href="{{ url(elixir('css/bootstrap.css'))}}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/css/dashboard.css" rel="stylesheet">

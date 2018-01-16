@@ -4,7 +4,8 @@
 
    <div class="button-content display-container"> </div>
      <div style="z-index: 2" id="burgerIcon" onclick="openNav()" > 
-           <img src="images/burger.svg" alt="burger">
+           <img class="burger-img" src="images/burger-white.svg" alt="burger">
+           <img style="display: none;" class="burger-img2" src="images/burger-red.svg" alt="burger">
    </div>
 
 
@@ -19,8 +20,8 @@
       <div class="carousel-item @if ($slides[0] == $slide) active @endif">
           <img class="d-block img-fluid" src="{{$slide->img}}" alt="Second slide">
           <div class="date">
-              <h2 class="txt-date">{{ str_replace('-','.',$slide->date)}}</h2>
-              <h2 class="txt-date">{{$slide->title}}</h2>
+              <div class="txt-date">{{ str_replace('-','.',$slide->date)}}</div>
+              <div class="txt-date-2">{{$slide->title}}</div>
           </div>
       </div>
     @endforeach
@@ -38,8 +39,8 @@
 </div>
     
     <!--<div class="date">
-        <h2 class="txt-date">27.11.</h2>
-        <h2 class="txt-date">Vintage Auto Exhibition</h2>
+        <h2></h2> class="txt-date">27.11.</h2></h2>>
+        <h2></h2> class="txt-date">Vintage Auto Exhibition</h2></h2>>
     </div> -->
 </div>
 
@@ -48,16 +49,16 @@
   
   <div id="services">
        <div class="container">
-           <h1 class="services-header col-12"> 
+           <div class="services-header col-12"> 
               the corner garage for collector cars
-           </h1>
+           </div>
   
           <div class="row">
             @foreach($services as $service)
-              <div class="col-md-4">
+              <div class="col-md-4 col-sm-12">
                   <div class="services-background">
                   <a href="#"><img class="services-img" src="{{$service->img}}" alt="modify"> </a>
-                  <h1 class="box-header">{{$service->title}}</h1>
+                  <div class="box-header">{{$service->title}}</div>
                   </div>
               </div>
           @endforeach
@@ -65,8 +66,8 @@
           
        </div>
   
-           <div class="container-fluid bus-background ">
-              <div class="bus"> <img style="width: 385px; float:right;" src="images/bus.png" alt="bus"></div>
+          <div class="container-fluid bus-background ">
+              <div class="bus"> <img style="width: 270px; float:right;" src="images/bus.png" alt="bus"></div>
            </div>
   </div>
   
@@ -78,12 +79,12 @@
        <div class="container contact-form">
           <div class="row">
              <div style="background: #EBE8DE" class="col-lg-4 col-md-12 p-5 adress-left "> 
-                  <h2 class="contact-info font-weight-bold"> contact information  </h2>
-                  <h2 class="contact-info2 font-weight-bold"> click to <br/> view </h2>
+                  <div class="contact-info"> contact information </div>
+                  <div class="contact-info2"> click to <br/> view </div>
       
                   <div class="social-img">
                   @foreach($sociallinks as $sociallink)
-                   <a href="{!! $sociallink->link !!}"> <img class="social-icon" src="{{$sociallink->icon}}" alt="google"> </a>
+                   <a href="{!! $sociallink->link !!}" target="_blank"> <img class="social-icon" src="{{$sociallink->icon}}" alt="google"> </a>
                   @endforeach
                  </div>
              </div>
@@ -93,7 +94,7 @@
               <form method="post">
               {!! csrf_field() !!}
               <div class="row">
-                <h2 class=" contact-header text-left mb-4 font-weight-bold">GET IN TOUCH</h2>     
+                <div class=" contact-header text-left mb-4 ">GET IN TOUCH</div>   
             <div class="col-md-6">
 
                 <input type="text" id="name-txt" name="name" value="{{ old('name') }}"  placeholder="name" required>
@@ -120,7 +121,7 @@
             </div>
       
       
-               <div style="white-space: nowrap;" class="col-5 ml-2 font-weight-bold">
+               <div style="white-space: nowrap;" class="col-5 ml-2">
                     <input type="radio" name="gender" value="male"> <span class="radio-txt"  @if(old('gender')== 'male')
                     checked
                     @endif> Male </span>
@@ -145,7 +146,7 @@
                     <input type="checkbox" name="newsletters[]" value="joboffers" @if(is_array(old('newsletters')) && in_array('joboffers', old('newsletters'))) checked @endif> 
                     <span class="chackbox-txt"> recive job offers <br> </span>
 
-                    <input  style="float: right" type="submit" class="btn btn-info" id="submitBtn" value="send">
+                    <input  style="float: right" type="submit"  id="submitBtn" value="send">
              </div>
             </div>  
                    @if (\Session::has('success'))                 
@@ -164,7 +165,7 @@
     <div style="display: none;" class="container social-icon-txt"> 
       <div class="row">
                  <div class="col-md-9 col-sm-7 col-7"> 
-                      <h2 class="contact-info3 font-weight-bold"> click to view </h2>
+                       <div class="contact-info3"> click to view </div>
                  </div>
                       <div class=" col-md-3 col-sm-5 col-5 social-img-2">
                        <a href="https://plus.google.com"> <img class="social-icon2" src="images/google.svg" alt="google"> </a>
