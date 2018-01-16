@@ -15,9 +15,8 @@ class UserSeeder extends Seeder
 	       [
 	       	'name'=>'admin',
 	      	'email'=>'admin@gmail.com',
-	      	'password'=>'$10$AtnCJw6RWWG/r4W9u7G3H.K9rslGPbBLbwc5QZ/uNmTP2o8IJ5MoK',
-	      	'isAdmin'=>true,
-	      	'remember_token'=>'OOxUgdTuRG6brHsYE3krtFxuzNTdesJZDBOlouDDhQ2VBGz4HVfncsh1hEhe'
+	      	'password'=>'$2y$10$yLWaNC0vfIQMXOi20RGgnus4ujnHmTxm/P2X8ykEmO0vI3B4wUgLS',
+	      	'isAdmin'=>true
 	       ]);
 	    }
 }
