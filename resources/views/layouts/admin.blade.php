@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-    @include('includes.head')
+    @include('includes.adminPage.head')
   </head>
 
   <body>
-    @include('includes.header')
+    @include('includes.adminPage.header')
 
     <div class="container-fluid">
       <div class="row">
-        @include('includes.left-bar')
+        @include('includes.adminPage.left-bar')
         @yield('content')
       </div>
     </div>
-    @include('includes.BootstrapJavaScript')
+    @include('includes.adminPage.BootstrapJavaScript')
     @yield('js')
   </body>
 </html>

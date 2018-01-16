@@ -84,7 +84,20 @@
       
                   <div class="social-img">
                   @foreach($sociallinks as $sociallink)
-                   <a href="{!! $sociallink->link !!}" target="_blank"> <img class="social-icon" src="{{$sociallink->icon}}" alt="google"> </a>
+                   <a href="{!! $sociallink->link !!}" target="_blank">
+                    <i @switch($sociallink->id)
+                        @case(1)
+                            class="fa fa-google-plus social-icon google-plus"
+                            @break
+                        @case(2)
+                            class="fa fa-facebook social-icon facebook"
+                            @break
+                        @case(3)
+                          class="fa fa-twitter social-icon twitter"
+                        @break
+                    @endswitch 
+                    aria-hidden="true"></i>
+                    <!--<img class="social-img" src="{{$sociallink->icon}}" alt="icon"> --></a>
                   @endforeach
                  </div>
              </div>
@@ -167,10 +180,23 @@
                  <div class="col-md-9 col-sm-7 col-7"> 
                        <div class="contact-info3"> click to view </div>
                  </div>
-                      <div class=" col-md-3 col-sm-5 col-5 social-img-2">
-                       <a href="https://plus.google.com"> <img class="social-icon2" src="images/google.svg" alt="google"> </a>
-                       <a href="https://facebook.com"> <img class="social-icon2" src="images/fb.svg" alt="facebook"> </a>
-                       <a href="https://twitter.com"> <img class="social-icon2" src="images/twitter.svg" alt="twitter"> </a>
+                      <div class=" col-md-3 col-sm-5 col-5 social-img2 pl-40">
+                        @foreach($sociallinks as $sociallink)
+                         <a href="{!! $sociallink->link !!}" target="_blank" style="text-decoration: none;">
+                          <i @switch($sociallink->id)
+                              @case(1)
+                                  class="fa fa-google-plus social-icon google-plus"
+                                  @break
+                              @case(2)
+                                  class="fa fa-facebook social-icon facebook"
+                                  @break
+                              @case(3)
+                                class="fa fa-twitter social-icon twitter"
+                              @break
+                          @endswitch 
+                          aria-hidden="true"></i>
+                         <!-- <img class="social-img" src="{{$sociallink->icon}}" alt="icon"> --> </a>
+                        @endforeach
                      </div>      
         </div>
     </div>

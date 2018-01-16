@@ -25,7 +25,7 @@
             </span>
         	@endif
         	</br>
-        	<label class="control-label" for="img">img</label>
+        	<label class="control-label" for="img">img ( if you do not choose the image it remains old )</label>
         	<input class="form-control" id="img" name="img" type="file" />
         	@if ($errors->has('img'))
             <span class="help-block">

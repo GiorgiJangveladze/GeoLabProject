@@ -8,6 +8,7 @@
 		<table class="table table-bordered">
 			<tr>
 				<th>id</th>
+				<th>Icon(route)</th>
 				<th>Icon</th>
 				<th>Link</th>
 				<th>Edit</th>
@@ -16,6 +17,7 @@
 			<tr>
 				<td>{{$socialLink->id}}</td>
 				<td>{{$socialLink->icon}}</td>
+				<td><img src="{{asset($socialLink->icon)}}" width="50px" height="50px" alt="icon"></td>
 				<td>{{$socialLink->link}}</td>
 				<td><a href="{!! route('editSocial_link',['id' => $socialLink->id]) !!}">Edit</a></td>
 			</tr>

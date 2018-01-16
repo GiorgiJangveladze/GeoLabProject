@@ -8,6 +8,7 @@
 		<table class="table table-bordered">
 			<tr>
 				<th>id</th>
+				<th>Img(route)</th>
 				<th>Img</th>
 				<th>Date</th>
 				<th>Title</th>
@@ -19,6 +20,7 @@
 			<tr>
 				<td>{{$slide->id}}</td>
 				<td>{{$slide->img}}</td>
+				<td><img src="{{asset($slide->img)}}" width="50px" height="50px" alt="img"></td>
 				<td>{{$slide->date}}</td>
 				<td>{{$slide->title}}</td>
 				<td>{{$slide->created_at}}</td>

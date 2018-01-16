@@ -9,6 +9,7 @@
 			<tr>
 				<th>id</th>
 				<th>Title</th>
+				<th>Img(route)</th>
 				<th>Img</th>
 				<th>Created</th>
 				<th>Edit</th>
@@ -19,6 +20,7 @@
 				<td>{{$service->id}}</td>
 				<td>{{$service->title}}</td>
 				<td>{{$service->img}}</td>
+				<td><img src="{{asset($service->img)}}" width="50px" height="50px" alt="img"></td>
 				<td>{{$service->created_at}}</td>
 				<td><a href="{!! route('editService',['id' => $service->id]) !!}">Edit</a></td>
 				<td><a href="javascript:;" class="Delete" rel="{{$service->id}}" >Delete</a></td>
