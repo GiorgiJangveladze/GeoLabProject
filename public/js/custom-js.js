@@ -43,7 +43,7 @@ $(window).on('resize', function(){
 
 $(document).scroll(function() {
     $('.burger-img2').css({display: $(this).scrollTop() > height ? "block":"none"});
-    $('.burger-img').css({display: $(this).scrollTop() < height ? "block":"none"});
+    $('.burger-img').css({display: $(this).scrollTop() <= height ? "block":"none"});
 
 });
 

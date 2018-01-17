@@ -18,7 +18,7 @@
   <div class="carousel-inner" role="listbox">
     @foreach($slides as $slide)
       <div class="carousel-item @if ($slides[0] == $slide) active @endif">
-          <img class="d-block img-fluid" src="{{$slide->img}}" alt="Second slide">
+          <img class="d-block img-fluid" width="100%" src="{{$slide->img}}" alt="Second slide">
           <div class="date">
               <div class="txt-date">{{ str_replace('-','.',$slide->date)}}</div>
               <div class="txt-date-2">{{$slide->title}}</div>
